@@ -1,14 +1,6 @@
-# @sandvikcode/web-tooling
+# web-tooling
 
 > Opinionated configs and CLI for JavaScript/TypeScript projects.
-
-## Installation
-
-Add `@sandvikcode/web-tooling` and `husky` as a devDependencies:
-
-```bash
-yarn add @sandvikcode/web-tooling husky --dev
-```
 
 ## Usage
 
@@ -69,7 +61,7 @@ Create configuration files depending on which tools you wish to use from this pr
 All configurations that are .js files can be extended like this:
 
 ```js
-const config = require('@sandvikcode/web-tooling/config/eslint');
+const config = require('web-tooling/config/eslint');
 config = {
   ...config,
   rules: {
@@ -83,38 +75,38 @@ module.exports = config;
 #### .eslintrc.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/eslint');
+module.exports = require('web-tooling/config/eslint');
 ```
 
 #### .prettierrc.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/prettier');
+module.exports = require('web-tooling/config/prettier');
 ```
 
 #### .stylelintrc.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/stylelint');
+module.exports = require('web-tooling/config/stylelint');
 ```
 
 #### jest.config.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/jest');
+module.exports = require('web-tooling/config/jest');
 ```
 
 #### lint-staged.config.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/lint-staged');
+module.exports = require('web-tooling/config/lint-staged');
 ```
 
 #### tsconfig.json
 
 ```json
 {
-  "extends": "@sandvikcode/web-tooling/config/tsconfig",
+  "extends": "web-tooling/config/tsconfig",
   "include": ["src/**/*"]
 }
 ```
@@ -134,7 +126,7 @@ not op_mini all
 #### babel.config.js
 
 ```js
-module.exports = require('@sandvikcode/web-tooling/config/babel');
+module.exports = require('web-tooling/config/babel');
 ```
 
 #### webpack.config.js
@@ -142,7 +134,7 @@ module.exports = require('@sandvikcode/web-tooling/config/babel');
 Default entrypoint for webpack config is "/src/" (index.js or index.ts or index.tsx)
 
 ```js
-const createConfig = require('@sandvikcode/web-tooling/config/webpack');
+const createConfig = require('web-tooling/config/webpack');
 
 module.exports = createConfig({
   // environment variables to add to the bundles
@@ -158,9 +150,7 @@ module.exports = createConfig({
 #### .storybook/config.js
 
 ```js
-const {
-  configure,
-} = require('@sandvikcode/web-tooling/config/storybook-react');
+const { configure } = require('web-tooling/config/storybook-react');
 
 configure(require.context('../src', true, /\.stories\.tsx$/), module);
 ```
@@ -168,9 +158,7 @@ configure(require.context('../src', true, /\.stories\.tsx$/), module);
 #### .storybook/webpack.config.js
 
 ```js
-const {
-  webpackConfig,
-} = require('@sandvikcode/web-tooling/config/storybook-react');
+const { webpackConfig } = require('web-tooling/config/storybook-react');
 
 module.exports = webpackConfig;
 ```

@@ -37,9 +37,7 @@ module.exports = ({
    * Folders to pass babel-loader on, useful for node_modules
    * dependencies that are published un-babelfied
    */
-  babelLoaderIncludes = [
-    path.resolve(process.cwd(), 'node_modules', `@sandvikcode/flames-ui/src`),
-  ],
+  babelLoaderIncludes = [],
 
   /**
    * path to a file with CSS variables to use

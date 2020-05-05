@@ -1,8 +1,8 @@
 {
-  "name": "@sandvikcode/web-tooling",
+  "name": "web-tooling",
   "version": "1.2.0",
   "description": "Configs and CLI for JavaScript/TypeScript projects.",
-  "repository": "sandvikcode/web-tooling",
+  "repository": "web-tooling",
   "license": "MIT",
   "files": [
     "__mocks__",
