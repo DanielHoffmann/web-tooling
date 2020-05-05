@@ -1,0 +1,85 @@
+{
+  "name": "@sandvikcode/web-tooling",
+  "version": "1.2.0",
+  "description": "Configs and CLI for JavaScript/TypeScript projects.",
+  "repository": "sandvikcode/web-tooling",
+  "license": "MIT",
+  "files": [
+    "__mocks__",
+    "bin",
+    "config",
+    "index.js"
+  ],
+  "bin": {
+    "web-tooling": "./bin/web-tooling"
+  },
+  "scripts": {
+    "format": "./bin/web-tooling format",
+    "lint": "./bin/web-tooling lint --no-css .",
+    "postversion": "git push --follow-tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./bin/web-tooling pre-commit",
+      "pre-push": "yarn lint"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
+    "@babel/runtime": "^7.7.2",
+    "@storybook/cli": "^5.2.6",
+    "@storybook/html": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "@svgr/webpack": "^4.3.3",
+    "@types/jest": "^24.0.22",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "commander": "^3.0.2",
+    "copy-webpack-plugin": "^5.0.5",
+    "cross-spawn": "^6.0.5",
+    "css-loader": "^3.2.0",
+    "emptyfunction": "1.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "file-loader": "^4.2.0",
+    "fs-extra": "^8.1.0",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-order": "^2.2.1",
+    "stylelint-value-no-unknown-custom-properties": "^2.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "worker-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9"
+  }
+}
