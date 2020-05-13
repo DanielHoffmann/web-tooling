@@ -12,7 +12,15 @@ const webpackConfig = ({ config }) => {
   config.resolve.alias['react-native-linear-gradient$'] =
     'react-native-web-linear-gradient';
   config.resolve.alias['@storybook/react-native$'] = '@storybook/react';
-  config.resolve.extensions.push('.ts', '.tsx');
+  config.resolve.extensions = [
+    '.web.js',
+    '.js',
+    '.json',
+    '.web.ts',
+    '.web.tsx',
+    '.ts',
+    '.tsx',
+  ];
 
   return config;
 };

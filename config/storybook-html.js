@@ -1,7 +1,15 @@
 const { configure } = require('@storybook/html');
 
 const webpackConfig = ({ config }) => {
-  config.resolve.extensions.push('.ts');
+  config.resolve.extensions = [
+    '.web.js',
+    '.js',
+    '.json',
+    '.web.ts',
+    '.web.tsx',
+    '.ts',
+    '.tsx',
+  ];
 
   return config;
 };

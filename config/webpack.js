@@ -278,7 +278,15 @@ module.exports = ({
         runtimeChunk: 'single',
       },
       resolve: {
-        extensions: ['.js', '.json', '.ts', '.tsx'],
+        extensions: [
+          '.web.js',
+          '.js',
+          '.json',
+          '.web.ts',
+          '.web.tsx',
+          '.ts',
+          '.tsx',
+        ],
         modules: [nodeModulesDir],
         alias: {
           'react-native$': 'react-native-web',
